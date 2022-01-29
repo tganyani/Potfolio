@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Demo2 Landing page</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <!--bootstrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <!--font awesome-->
+	<script src="https://kit.fontawesome.com/d540835d5d.js" crossorigin="anonymous"></script>
+
+
+	<style>
+		.navbar-collapse{
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			margin-left: 10vw;
+		}
+		.NewNavbar2{
+			background-image: linear-gradient(to bottom right,#000000,#FFFFFF) !important;
+
+		}
+
+		.navbar-nav{
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.navbar-nav li{
+			margin-left:2vw ;
+		}
+		.navbar-nav li a{
+			font-weight: 600;
+			color: white !important;
+		}
+		.navbar-brand{
+			font-weight: 900;
+			color:  #E8E8E8 !important;
+		}
+		.navbar-brand:hover::after{
+		content: ' ';
+			background-color:red;
+			height: 1px;
+			width: auto;
+			display: block;	
+		}
+		.navbar-nav li a:hover::after{
+			content: ' ';
+			background-color:black;
+			height: 1px;
+			width: auto;
+			display: block;
+		}
+		.navbar-nav li a:hover{
+			color: red !important;
+		}
+		.fab:hover{
+			color: red !important;
+			transform: scale(1.1);
+		}
+
+		.nav-link .btn{
+			width: 160px;
+			height: 50px;
+			font-size:16px;
+			font-weight: 600;
+			border-radius: 25px;
+		}
+		.nav-link .btn:hover{
+			background-color: black;
+		}
+		.navbar{
+			background-image: linear-gradient(to bottom right,#0066FF,#00FFFF);
+		}
+		.navbar-toggler{
+			padding: 2px;
+		}
+
+		/*responsive*/
+		@media only screen and (max-width:992px){
+			.navbar-collapse{
+				flex-flow: column nowrap;
+			}
+			.navbar-nav{
+				flex-flow: column nowrap;
+			}
+			.myImage{
+				margin-top: 40px;
+			}
+			*{
+				font-size: 14px;
+				font-weight: 500;
+			}
+			.navbar{
+				min-height:100px ;
+			}
+
+		}
+
+		/*******************************************/
+		/*home*/
+		.home{
+			height: auto;
+			background-image: linear-gradient(to top right,#0066FF,#00FFFF);
+		}
+		.row{
+			padding-top: 120px;
+		}
+		.home-info {
+			color: #DCDCDC !important;
+		}
+		.home-info a{
+			width: 160px;
+			height: 50px;
+			font-size:16px;
+			font-weight: 600;
+			border-radius: 25px;
+			margin-right: 30px;
+			margin-top: 40px;
+			border: 2px solid #E8E8E8;
+			color: #DCDCDC !important;
+			padding-top: 10px;
+		}
+		.home-info a:hover{
+			background-color: #B00000 !important;
+			border: none !important;
+		}
+		.home-info span{
+			font-size:16px;
+			font-weight: 600;
+
+		}
+		.home-info small{
+			color: red;
+		}
+		.myImage{
+			min-width:95%;
+			height:450px ;
+			margin-bottom: 40px;
+			box-shadow: 10px 10px 50px white ;
+		}
+
+		/*about*/
+
+		#about {
+			background-color: #E8E8E8;
+		}
+		#about .row >div{
+			background-color: #FFFFFF;
+		}
+		#about .row{
+			font-weight: 600;
+			font-size:16px;
+			color:#696969 ;
+		}
+		#about .row ul{
+			list-style: none;
+		}
+		#about .row .line-bar{
+			letter-spacing: 10px;
+			font-size:20px;
+			color: #202020;
+		}
+		#about .row .skill-thumb .progress{
+			margin-bottom: 25px;
+		}
+		#about .row .skill-thumb strong{
+			margin-bottom:5px;
+		}
+		#about .row .skill-thumb h2::after,
+		#about .row .section-title h2::after{
+			content:" ";
+			height: 2px;
+			width: 200px;
+			background-color: #101010;
+			display: block;
+		}
+		#about .row .about-image img{
+			height: 350px;
+			margin-bottom: 10px;
+			width: 96%;
+			margin-left: 3px;
+			object-fit: cover;
+		}
+		/*work*/
+		#work .work-thumb .img-responsive{
+			width: 95%;
+			height: 250px;
+			object-fit: cover;
+			margin-left: 8px;
+
+		}
+		#work .section-title{
+			text-align: center;
+			margin-bottom: 20px;
+			font-weight: 600;
+			font-size:16px;
+			color:#696969 ;
+			position: relative
+		}
+		#work {
+			background-color: #E8E8E8;
+			margin-bottom: 70px;
+			padding-bottom: 70px;
+		}
+
+		#work .section-title span{
+			font-size: 50px;
+			
+		}
+		#work .section-title h2{
+			position: absolute;
+			top: 6px;
+			left: 43%;
+		}
+		#work .section-title h2:hover::after{
+			content: " ";
+			width: auto;
+			height: 2px;
+			background-color: #C80000 ;
+			display:block;
+		}
+		#work .section-title span:hover{
+			color: #E00000;
+		}
+		#work .row >div{
+			background-color:#FFFFFF ;
+		}
+		#work .work-thumb >a{
+			text-decoration: none;
+			text-align:center;
+			font-size:16px;
+			color:#696969 ;
+		}
+		#work .work-thumb {
+			position:relative;
+
+		}
+		#work .work-thumb .work-info h3{
+			position:absolute;
+			bottom:100px ;
+			left: 20%;
+			color: white;
+		}
+		#work .work-thumb .work-info{
+			font-size:22px;
+
+		}
+		/*contact*/
+		#contact .row .section-title{
+			text-align: center;
+			font-size:16px;
+			color:F5F5F5 ;
+			position: relative;
+		}
+		#contact .row .section-title span {
+			font-size: 50px;
+		}
+		#contact .row .section-title h2{
+			position: absolute;
+			top: 8px;
+			left: 43%;
+		}
+		#contact .row .section-title h2:hover::after{
+			content: " ";
+			width: auto;
+			height: 2px;
+			background-color: #C80000 ;
+			display:block;
+		}
+		#contact .row .section-title span:hover{
+			color: #E00000;
+
+		}
+		#contact{
+			background-image: linear-gradient(to bottom right,#0066FF,#00FFFF);
+
+		}
+		#contact form input[type='submit']{
+			background-color: #C80000;
+			height: 40px;
+			border-radius: 20px;
+		}
+		/*footer*/
+		footer {
+			background-image: linear-gradient(to  right bottom,#484848,#000000);
+			font-size: 16px;
+			font-weight: 400;
+			color: #ffffff;
+			padding-bottom: 50px;
+			text-align: center;
+		}
+		.footer-link{
+			list-style: none;
+			text-decoration: none;
+		}
+		.footer-link li a{
+			text-decoration: none;
+		}
+
+		.footer-row2 ul{
+			display: flex;
+			flex-direction:row;
+			justify-content:center;
+		}
+		.footer-row2 ul li{
+			margin-right: 20px;
+
+		}
+		.footer-thumb ul li a,.copyright-text p,.phone-contact p,.footer-thumb p{
+			color:#D3D3D3;
+		}
+
+		
+	</style>
+ 
+</head>
+<body>
+     <!--Navbar-->
+
+	<section class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id='navB'>
+		<div class="container">
+			<a class="navbar-brand" href="#">Tgb</a>
+			<button class="navbar-toggler" type="button" 	data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      			<span class="navbar-toggler-icon"></span>
+    		</button>
+    		<div class="collapse navbar-collapse" id="navbarNav">
+      			<ul class="navbar-left navbar-nav " >
+        			<li class="nav-item">
+			          <a class="nav-link active" aria-current="page" href="#">Home</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#about">About</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#about">Blog</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link " href="#work" >My Work</a>
+			        </li>
+
+		      	</ul>
+		      	<ul class='navbar-nav  navbar-right'>
+		      		<li class="nav-item">
+			          <i class="nav-link fab fa-facebook"></i>
+			        </li>
+			        <li class="nav-item">
+			          <i class="nav-link fab fa-github"></i>
+			        </li>
+			        <li class="nav-item">
+			          <i class="nav-link fab fa-vk"></i>
+			        </li>
+			        <li class="nav-link"><button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#form-modal" >SingIn/_\LogIn</button></li>
+		      	</ul>
+		    </div>
+
+	</section>
+	<!-- HOME -->
+	<section id='home' class='home'>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<div class="home-info">
+						<h1>I make fully responsive websites for all people.</h1>
+						<a href="#about" class="btn section-btn smoothScroll">See a project</a>
+						<span>
+                                   CALL US 
+                                   <small>For any inquiry</small>
+                              </span>
+					</div>
+
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<img class="myImage" src="my_image/img1.jpg" alt="myImage">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ABOUT -->
+	<section id="about" >
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-sm-6">
+					<div class="section-title">
+						<h2>Let me introduce</h2>
+						<span class="line-bar">...</span>
+					</div>
+					<p>Tatenda Ganyani is a frontend developer who have skills in</p>
+					<ul>
+						<li>html</li>
+						<li>css</li>
+						<li>javascript</li>
+						<li>react js</li>
+						<li>bootstrap</li>
+					</ul>
+					<p>Everyday I learn new technologies in since technology keeps evolving each and every day</p>
+				</div>
+				<div class="col-md-3 col-sm-6">
+                         <div class="about-info skill-thumb">
+                              <h2>Experience Level</h2>
+
+                              <strong>html</strong>
+                                   <span class="pull-right">90%</span>
+                                        <div class="progress">
+                                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                        </div>
+
+                              <strong>css</strong>
+                                   <span class="pull-right">85%</span>
+                                        <div class="progress">
+                                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+                                        </div>
+
+                              <strong>javascript</strong>
+                                   <span class="pull-right">75%</span>
+                                        <div class="progress">
+                                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                        </div>
+
+                              <strong>react js</strong>
+                                   <span class="pull-right">70%</span>
+                                        <div class="progress">
+                                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                                        </div>
+
+                              <strong>bootstrap</strong>
+                                   <span class="pull-right">95%</span>
+                                        <div class="progress">
+                                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+                                        </div>         
+
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                         <div class="about-image">
+                              <img src="my_image/img2.jpg" class="img-responsive" alt="img2">
+                         </div>
+                    </div>
+                     
+		
+			</div>
+		</div>
+		
+	</section>
+
+	 <!-- WORK -->
+	 <section id="work">
+	 	<div class="container">
+	 		<div class="row">
+	 			<div class="col-md-12 col-sm-12">
+	 				<div class="section-title">
+	 					<h2>My work</h2>
+	 					<span class="line-bar">...</span>
+	 				</div>
+	 			</div>
+	 			<div class="col-md-3 col-sm-6">
+                         <!-- html-->
+                         <div class="work-thumb">
+                              <a href="my_image/img4.png" class="image-popup">
+                                   <img src="my_image/img4.png" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>lists</h3>
+                                        <small>responsive design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <!-- css-->
+                         <div class="work-thumb">
+                              <a href="my_image/img3.png" class="image-popup">
+                                   <img src="my_image/img3.png" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>media quarry</h3>
+                                        <small>responsive design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <!-- js-->
+                         <div class="work-thumb">
+                              <a href="my_image/img5.png" class="image-popup">
+                                   <img src="my_image/img5.png" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>js</h3>
+                                        <small>responsive design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <!-- react js-->
+                         <div class="work-thumb">
+                              <a href="my_image/img6.png" class="image-popup">
+                                   <img src="my_image/img6.png" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>functional Component</h3>
+                                        <small>online quiz test design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+	 		</div>
+	 	</div>
+	 </section>
+<!-- CONTACT -->
+<section id='contact'>
+	<div class='container'>
+		<div class='row'>
+			<div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Contact us</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+               </div>
+               	<div class="col-md-8 col-sm-8">
+                        
+                         <!-- CONTACT FORM HERE -->
+                         <form class="form-row" id="contact-form" role="form" action="/send_email" method="post">
+                              <div class="col-md-6 col-sm-6">
+                                   <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="name" required="">
+                              </div>
+
+                              <div class="col-md-6 col-sm-6">
+                                   <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="email" required="">
+                              </div>
+                             
+                              <div class="col-md-12 col-sm-12">
+                                   <textarea class="form-control" rows="6" placeholder="Your message" id="cf-message" name="message" required=""></textarea>
+                              </div>
+
+                              <div class="col-md-4 col-sm-12">
+                                   <input type="submit" class="form-control" name="submit" value="Send Message">
+                              </div>
+
+                         </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                         <div class="google-map">
+						See the map
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2116.686894965872!2d37.50031715084224!3d55.65066164767991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54d6cefedcfad%3A0x25116406e33d27f9!2z0KDQvtGB0YHQuNC50YHQutC40Lkg0YPQvdC40LLQtdGA0YHQuNGC0LXRgiDQtNGA0YPQttCx0Ysg0L3QsNGA0L7QtNC-0LI!5e0!3m2!1sru!2sru!4v1643493563126!5m2!1sru!2sru" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                         </div>
+                    </div>
+                   
+		</div>
+	</div>
+</section>
+<!-- FOOTER -->
+     <footer data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-thumb footer-info"> 
+                              <h2>Tgb Company</h2>
+                              <p>We create responsive websites for all people</p>
+                              <p>We are still a small starting company but with your support there is hope that we will grow </p>
+                              <p>Quality and scalabity are our first priority</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h2>Company</h2>
+                              <ul class="footer-link">
+                                   <li><a href="#">About Us</a></li>
+                                   <li><a href="#">Join our team</a></li>
+                                   <li><a href="#">Read Blog</a></li>
+                                   <li><a href="#">Press</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h2>Services</h2>
+                              <ul class="footer-link">
+                                   <li><a href="#">frontend development with html/css or react</a></li>
+                                   <li><a href="#">backend development with node js express and mongo db</a></li>
+                                   <li><a href="#">deploying on Heroku</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h2>Find us</h2>
+                              <p>Ulitsa mikhluxo maklaya dom 17  <br>Moscow Russia </p>
+                         </div>
+                    </div>                    
+
+                    
+                    
+               </div>
+               <hr>
+               <div class="row footer-row2">
+                              <div class="col-md-4 col-sm-12">
+                                   <div class="copyright-text"> 
+                                        <p>Copyright &copy; 2022 Your Company</p>
+                                   </div>
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                   <div class="phone-contact"> 
+                                        <p>Call us <span>number tempororily unavailable</span></p>
+                                   </div>
+                                   
+                              </div>
+                              <ul class="col-md-4 col-sm-12 footer-link">
+					      		<li >
+						          <i class=" fab fa-facebook"></i>
+						        	</li>
+						        	<li >
+						          <i class=" fab fa-github"></i>
+						        	</li>
+						        	<li >
+						          <i class="fab fa-vk"></i>
+						        	</li>
+						        	
+					      </ul>
+                    </div>
+                    <hr>
+
+          </div>
+
+
+     </footer>
+     <!--Modal-->
+     <section class="modal fade container" id="form-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<h2>Tgb</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+        	<div class="row">
+        		<div class="col-md-12 col-sn-12">
+        			<nav>
+					  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+					    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#signin" type="button" role="tab" aria-controls="nav-home" aria-selected="true">SignIn</button>
+					    
+					    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">LogIn</button>
+					  </div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+					  <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="nav-signin-tab">
+					  	<form>
+							<div class="mb-3">
+						    <label for="name" class="form-label">Enter Your Name</label>
+						    <input type="text" class="form-control" id="yourname" >
+						  </div>
+						 <div class="mb-3">
+						    <label for="phone" class="form-label">Enter Telephone</label>
+						    <input type="number" class="form-control" id="yournumber" >
+						  </div>
+						  <div class="mb-3">
+						    <label for="email" class="form-label">Enter Email</label>
+						    <input type="email" class="form-control" id="youremail" >
+						  </div>
+						 <div class="mb-3">
+						    <label for="password" class="form-label">Enter Password</label>
+						    <input type="password" class="form-control" id="yourname" >
+						  </div>
+						  <button type="submit" class="btn btn-danger btn-lg">Submit</button>
+					  	</form>
+					  </div>
+					  <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="nav-login-tab">
+					  	<form>
+					  		<div class="mb-3">
+						    <label for="email" class="form-label">Enter Email</label>
+						    <input type="email" class="form-control" id="youremail" >
+						  </div>
+						 <div class="mb-3">
+						    <label for="password" class="form-label">Enter Password</label>
+						    <input type="password" class="form-control" id="yourname" >
+						  </div>
+						  <button type="submit" class="btn btn-danger btn-lg">Submit</button>
+					  	</form>
+					  </div>
+					 
+					</div>
+        		</div>
+        	</div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+<script>
+	window.onscroll= function (){
+		myFunction()
+	}
+	function myFunction(){
+		if(document.body.scrollTop>60 || document.documentElement.scrollTop>60){
+			document.getElementById('navB').classList.add('NewNavbar2')
+		}else{
+			document.getElementById('navB').classList.remove('NewNavbar2')
+
+		}
+	}
+</script>
+</body>
+</html>
